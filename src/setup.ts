@@ -13,7 +13,7 @@ import { isUbuntu } from './utils';
  * 3. Install TypeScript if necessary
  */
 export async function setup(): Promise<void> {
-  core.addPath(resolve(getSonarScannerDirectory(), 'bin'));
+  core.addPath(getSonarScannerDirectory());
 
   // Add default options
   if (core.getInput('options') !== '') {
